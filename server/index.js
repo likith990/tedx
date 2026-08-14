@@ -13,7 +13,7 @@ dotenv.config();
 const app=express();
 const PORT= process.env.PORT || 8080;
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "*" }));
+app.options("/{*splat}", cors({ origin: process.env.CLIENT_ORIGIN || "*" }));
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
