@@ -1,0 +1,69 @@
+
+
+.speakers-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.speakers-panel__notice {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.speakers-panel__notice--success {
+  background: #e9f7ee;
+  color: #1e7a3d;
+}
+
+.speakers-panel__notice--error {
+  background: #fdecec;
+  color: var(--color-red-dark);
+}
+
+.speakers-panel__state {
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.speakers-panel__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.speakers-panel__table th,
+.speakers-panel__table td {
+  text-align: left;
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.speakers-panel__table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+}
+
+.speakers-panel__actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.speakers-panel__actions button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.speakers-panel__delete {
+  color: var(--color-red);
+}

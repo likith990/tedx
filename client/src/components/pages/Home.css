@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  background: var(--color-ink);
+  color: var(--color-ink-inverse);
+  overflow: hidden;
+  padding: var(--space-8) 0 var(--space-7);
+}
+
+.hero__glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, var(--color-red) 0%, transparent 70%);
+  opacity: 0.35;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__eyebrow {
+  margin-bottom: var(--space-3);
+}
+
+.hero__title {
+  font-size: var(--text-h1);
+  color: var(--color-ink-inverse);
+}
+
+.hero__title span {
+  color: var(--color-red);
+}
+
+.hero__tagline {
+  margin-top: var(--space-4);
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+}

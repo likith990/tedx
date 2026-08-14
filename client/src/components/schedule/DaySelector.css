@@ -1,0 +1,89 @@
+
+
+.day-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+  margin-bottom: var(--space-6);
+}
+
+.day-selector__item {
+  position: relative;
+  background: var(--color-paper);
+  border: none;
+  padding: var(--space-4) var(--space-3);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.day-selector__item:hover {
+  background: var(--color-mist);
+}
+
+.day-selector__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.day-selector__item.is-active {
+  background: var(--color-ink);
+}
+
+.day-selector__item.is-active::before {
+  background: var(--color-red);
+}
+
+.day-selector__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-red);
+}
+
+.day-selector__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.day-selector__date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.day-selector__item.is-active .day-selector__name {
+  color: var(--color-ink-inverse);
+}
+
+.day-selector__item.is-active .day-selector__date {
+  color: rgba(255, 248, 236, 0.7);
+}
+
+@media (max-width: 640px) {
+  .day-selector__item {
+    padding: var(--space-3) var(--space-2);
+  }
+  .day-selector__name {
+    font-size: 1rem;
+  }
+  .day-selector__date {
+    font-size: 0.68rem;
+  }
+}

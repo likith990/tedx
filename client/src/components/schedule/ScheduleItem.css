@@ -1,0 +1,126 @@
+
+@keyframes schedule-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 92px 150px 1fr 170px;
+  align-items: start;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-line);
+  animation: schedule-item-in 480ms var(--ease-out) both;
+  animation-delay: calc(var(--stagger-index, 0) * 70ms);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.schedule-item:hover {
+  background: rgba(36, 22, 9, 0.03);
+}
+
+.schedule-item.is-featured {
+  border-left: 3px solid var(--color-red);
+  padding-left: var(--space-3);
+  background: rgba(235, 0, 40, 0.05);
+}
+
+.schedule-item.is-featured:hover {
+  background: rgba(235, 0, 40, 0.08);
+}
+
+.schedule-item__time {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  padding-top: 0.15rem;
+}
+
+.schedule-item.is-featured .schedule-item__time {
+  color: var(--color-red);
+}
+
+.schedule-item__type {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding-top: 0.25rem;
+}
+
+.schedule-item.is-featured .schedule-item__type {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+.schedule-item__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.15;
+  margin-bottom: 0.3rem;
+}
+
+.schedule-item__description {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  max-width: 54ch;
+}
+
+.schedule-item__speaker {
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-ink);
+}
+
+.schedule-item__speaker::before {
+  content: "— ";
+  color: var(--color-red);
+}
+
+.schedule-item__location {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-align: right;
+  padding-top: 0.25rem;
+}
+
+@media (max-width: 780px) {
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .schedule-item__time {
+    font-size: 1.05rem;
+  }
+
+  .schedule-item__type {
+    margin-bottom: var(--space-2);
+  }
+
+  .schedule-item__location {
+    text-align: left;
+    margin-top: var(--space-2);
+  }
+
+  .schedule-item__location::before {
+    content: "— ";
+    color: var(--color-red);
+  }
+}

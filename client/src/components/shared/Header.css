@@ -1,0 +1,83 @@
+
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(233, 218, 194, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.site-header__logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.site-header__logo span {
+  color: var(--color-red);
+}
+
+.site-header__nav {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.site-header__nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.site-header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-red);
+  transition: width var(--dur-fast) var(--ease-out);
+}
+
+.site-header__nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .site-header__nav {
+    display: none;
+  }
+}
+
+.site-header__admin-btn {
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: inherit;
+  margin-left: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.site-header__admin-btn:hover {
+  opacity: 0.75;
+}

@@ -1,0 +1,15 @@
+
+
+.speakers-section__state {
+  padding: var(--space-6) 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+}
+
+.speakers-section__state--error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}

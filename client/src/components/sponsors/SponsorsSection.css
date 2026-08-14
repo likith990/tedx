@@ -1,0 +1,107 @@
+
+.sponsors-section {
+  border-top: 1px solid var(--color-line);
+}
+
+.sponsors-section__head {
+  margin-bottom: var(--space-6);
+}
+
+.sponsors-section__desc {
+  margin-top: var(--space-3);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  max-width: 520px;
+}
+
+.sponsors-section__head > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+}
+
+.sponsors-section__head .eyebrow {
+  transition-delay: 0ms;
+}
+
+.sponsors-section__head h2 {
+  transition-delay: 90ms;
+}
+
+.sponsors-section__desc {
+  transition-delay: 180ms;
+}
+
+.sponsors-section.is-visible .sponsors-section__head > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sponsors-grid__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-line);
+  margin-bottom: var(--space-4);
+}
+
+.sponsors-grid__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-line);
+  border: 1px solid var(--color-line);
+  margin-bottom: var(--space-6);
+}
+
+.sponsors-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-line);
+}
+
+.sponsors-cta p {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.sponsors-cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.sponsors-cta__link span {
+  color: var(--color-red);
+  display: inline-block;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.sponsors-cta__link:hover {
+  color: var(--color-red);
+}
+
+.sponsors-cta__link:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 720px) {
+  .sponsors-grid__row {
+    grid-template-columns: 1fr;
+  }
+}

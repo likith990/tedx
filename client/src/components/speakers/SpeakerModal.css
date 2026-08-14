@@ -1,0 +1,127 @@
+
+
+.speaker-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  z-index: 100;
+}
+
+.speaker-modal {
+  position: relative;
+  background: var(--color-paper);
+  max-width: 780px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius-md);
+}
+
+.speaker-modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-ink);
+  color: var(--color-ink-inverse);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.speaker-modal__close:hover {
+  background: var(--color-red);
+}
+
+.speaker-modal__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .speaker-modal__grid {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.speaker-modal__frame {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-mist);
+}
+
+.speaker-modal__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-modal__photo-fallback {
+  width: 100%;
+  height: 100%;
+  background: var(--color-ink);
+}
+
+.speaker-modal__content {
+  padding: var(--space-5);
+}
+
+.speaker-modal__name {
+  font-size: var(--text-h3);
+  margin-top: var(--space-2);
+}
+
+.speaker-modal__designation {
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.speaker-modal__bio {
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.speaker-modal__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+}
+
+.speaker-modal__tags li {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  color: var(--color-muted);
+}
+
+.speaker-modal__socials {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.speaker-modal__socials a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--color-red);
+  padding-bottom: 2px;
+}
