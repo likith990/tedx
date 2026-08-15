@@ -29,7 +29,7 @@
   --text-body-lg: 1.15rem;
   --text-h3: 1.5rem;
   --text-h2: clamp(2.25rem, 4.5vw, 3.5rem);
-  --text-h1: clamp(3.5rem, 11vw, 9.5rem);
+   --text-h1: clamp(2.75rem, 7.5vw, 6.75rem);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;

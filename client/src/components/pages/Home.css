@@ -1,15 +1,14 @@
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
   background: var(--color-bg);
   color: var(--color-ink-inverse);
   overflow: hidden;
-  padding: var(--space-8) 0 var(--space-7);
+  padding: var(--space-6) 0 var(--space-6);
 }
 
-/* Atmospheric burgundy glow — subtle, not a "blob" */
 .hero__glow {
   position: absolute;
   top: -30%;
@@ -49,7 +48,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-muted);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .hero__meta span:not(:last-child)::after {
