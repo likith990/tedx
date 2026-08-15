@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { venueApi } from "../../api/client";
-import "./VenueSection";
+import "./VenueSection.css";
 
 export default function VenueSection() {
   const [venue, setVenue] = useState(null);
