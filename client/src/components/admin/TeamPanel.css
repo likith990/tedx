@@ -1,0 +1,68 @@
+
+.team-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.team-panel__notice {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.team-panel__notice--success {
+  background: #e9f7ee;
+  color: #1e7a3d;
+}
+
+.team-panel__notice--error {
+  background: #fdecec;
+  color: var(--color-red-dark);
+}
+
+.team-panel__state {
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.team-panel__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-panel__table th,
+.team-panel__table td {
+  text-align: left;
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.team-panel__table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+}
+
+.team-panel__actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.team-panel__actions button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.team-panel__delete {
+  color: var(--color-red);
+}

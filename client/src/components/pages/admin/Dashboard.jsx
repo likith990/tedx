@@ -3,11 +3,15 @@ import { useState } from "react";
 import { useAuth } from "../../../context/AuthContext";
 import SpeakersPanel from "../../admin/SpeakersPanel";
 import SchedulePanel from "../../admin/SchedulePanel";
+import TeamPanel from "../../admin/TeamPanel";  
+import VenuePanel from "../../admin/VenuePanel";
 import "./Dashboard.css";
 
 const TABS = [
   { key: "speakers", label: "Speakers" },
   { key: "schedule", label: "Schedule" },
+  { key: "team", label: "Team" },     
+  { key: "venue", label: "Venue" }, 
 ];
 
 export default function Dashboard() {
@@ -47,6 +51,8 @@ export default function Dashboard() {
         <div className="admin-dashboard__content">
           {activeTab === "speakers" && <SpeakersPanel />}
           {activeTab === "schedule" && <SchedulePanel />}
+          {activeTab === "team" && <TeamPanel />}   
+          {activeTab === "venue" && <VenuePanel />}
         </div>
       </div>
     </div>

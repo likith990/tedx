@@ -5,6 +5,8 @@ import { pingServer } from "../../api/client";
 
 import ScheduleSection from "../schedule/ScheduleSection";
 import SponsorsSection from "../sponsors/SponsorsSection";
+import TeamSection from "../team/TeamSection";     
+import VenueSection from "../venue/VenueSection"; 
 import "./Home.css";
 
 export default function Home() {
@@ -33,8 +35,8 @@ export default function Home() {
         <ScheduleSection />
 
        <SponsorsSection />
-        {/* Team / POR section will mount here */}
-        {/* Venue + directions section will mount here */}
+        <TeamSection />
+        <VenueSection />
         {/* Gallery / FAQ sections will mount here */}
       </main>
     </>
