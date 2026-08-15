@@ -64,3 +64,16 @@ export const speakersApi = {
   update: (id, data) => api.put(`/api/speakers/${id}`, data, { auth: true }),
   remove: (id) => api.del(`/api/speakers/${id}`, { auth: true }),
 };
+
+export const teamApi = {
+  list: () => api.get("/api/team"),
+  create: (data) => api.post("/api/team", data, { auth: true }),
+  update: (id, data) => api.put(`/api/team/${id}`, data, { auth: true }),
+  remove: (id) => api.del(`/api/team/${id}`, { auth: true }),
+};
+
+export const venueApi = {
+  get: () => api.get("/api/venue"),
+  save: (data) => api.put("/api/venue", data, { auth: true }),
+  remove: () => api.del("/api/venue", { auth: true }),
+};

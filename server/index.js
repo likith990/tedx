@@ -7,6 +7,8 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/auth.js";
 import speakerRoutes from "./routes/speakers.js";
+import teamRoutes from "./routes/team.js";
+import venueRoutes from "./routes/venue.js";
 
 
 dotenv.config();
@@ -23,7 +25,8 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/speakers", speakerRoutes);
-
+app.use("/api/team", teamRoutes);
+app.use("/api/venue", venueRoutes);
 
 connectDB().then(() => {
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
