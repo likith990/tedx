@@ -73,7 +73,7 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
-            <span />
+            <span  />
             <span />
           </button>
         </div>
