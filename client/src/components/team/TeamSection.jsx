@@ -48,9 +48,10 @@ export default function TeamSection() {
 
         {status === "ready" && members.length > 0 && (
           <div className="team-grid">
-            {members.map((member) => (
-              <TeamCard key={member._id} member={member} />
+           {members.map((member, index) => (
+              <TeamCard key={member._id} member={member} index={index} />
             ))}
+            
           </div>
         )}
       </div>

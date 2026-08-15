@@ -13,7 +13,8 @@
 
 .speaker-modal {
   position: relative;
-  background: var(--color-paper);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-line);
   max-width: 780px;
   width: 100%;
   max-height: 90vh;
@@ -28,8 +29,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: none;
-  background: var(--color-ink);
+  background: rgba(242, 236, 228, 0.1);
+  border: 1px solid var(--color-line);
   color: var(--color-ink-inverse);
   font-size: 1.5rem;
   line-height: 1;

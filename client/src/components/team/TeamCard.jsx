@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 import "./TeamCard.css";
 
-export default function TeamCard({ member }) {
+export default function TeamCard({ member, index }) {
   const [imgError, setImgError] = useState(false);
   const initials = member.name
     .split(" ")
@@ -14,6 +13,8 @@ export default function TeamCard({ member }) {
   return (
     <div className="team-card">
       <div className="team-card__frame">
+        <span className="team-card__index">{String(index + 1).padStart(2, "0")}</span>
+
         {member.photoUrl && !imgError ? (
           <img
             src={member.photoUrl}

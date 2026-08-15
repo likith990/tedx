@@ -1,4 +1,3 @@
-
 import "./SponsorCard.css";
 
 export default function SponsorCard({ sponsor, index, size }) {

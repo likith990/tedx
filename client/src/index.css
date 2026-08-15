@@ -1,6 +1,4 @@
-
-
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,wght@0,400;1,400;1,500&display=swap");
 @import "./styles/tokens.css";
 
 *,
@@ -23,16 +21,29 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--color-ink);
-  background: var(--color-paper);
+  color: var(--color-ink-inverse);
+  background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 h1,
@@ -41,7 +52,7 @@ h3,
 h4 {
   font-family: var(--font-display);
   margin: 0;
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
@@ -64,21 +75,46 @@ button {
   cursor: pointer;
 }
 
+::selection {
+  background: var(--color-red);
+  color: #0a0708;
+}
+
 :focus-visible {
-  outline: 3px solid var(--color-red);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-red);
+  outline-offset: 3px;
+}
+
+/* Minimal dark scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(242, 236, 228, 0.18);
+  border: 2px solid var(--color-bg);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red-dim);
+}
+html {
+  scrollbar-color: rgba(242, 236, 228, 0.18) var(--color-bg);
+  scrollbar-width: thin;
 }
 
 .container {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 var(--edge);
 }
 
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-eyebrow);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-red);
   font-weight: 500;
@@ -86,6 +122,17 @@ button {
 
 .section {
   padding: var(--space-7) 0;
+  position: relative;
+}
+
+.section-index {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--edge);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  letter-spacing: 0.1em;
 }
 
 .section-head {
@@ -104,13 +151,13 @@ button {
   gap: var(--space-2);
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.85rem 1.6rem;
+  padding: 0.9rem 1.8rem;
   border-radius: var(--radius-sm);
-  border: 2px solid var(--color-ink);
-  background: var(--color-ink);
+  border: 1px solid var(--color-ink-inverse);
+  background: transparent;
   color: var(--color-ink-inverse);
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
     border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
@@ -119,6 +166,7 @@ button {
 .btn:hover {
   background: var(--color-red);
   border-color: var(--color-red);
+  color: #0a0708;
 }
 
 .btn:active {
@@ -127,11 +175,34 @@ button {
 
 .btn-outline {
   background: transparent;
-  color: var(--color-ink);
+  color: var(--color-ink-inverse);
+  border-color: rgba(242, 236, 228, 0.3);
 }
 
 .btn-outline:hover {
-  background: var(--color-ink);
+  background: var(--color-ink-inverse);
+  color: #0a0708;
+  border-color: var(--color-ink-inverse);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--color-ink-inverse);
-  border-color: var(--color-ink);
+}
+
+.link-arrow span {
+  display: inline-block;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.link-arrow:hover span {
+  transform: translateX(6px);
+  color: var(--color-red);
 }

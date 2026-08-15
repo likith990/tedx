@@ -1,10 +1,9 @@
-
 .schedule-section {
   border-top: 1px solid var(--color-line);
 }
 
 .schedule-section__day-blurb {
-  font-family: var(--font-body);
+  font-family: var(--font-serif);
   font-size: var(--text-body-lg);
   font-style: italic;
   color: var(--color-muted);

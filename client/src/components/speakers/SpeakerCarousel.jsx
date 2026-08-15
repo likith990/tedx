@@ -70,11 +70,16 @@ export default function SpeakerCarousel({ speakers, onOpenSpeaker }) {
               key={i}
               style={{ width: `${100 / pages.length}%` }}
             >
-              {chunk.map((speaker) => (
+              {chunk.map((speaker, chunkIndex) => (
                 <div className="speaker-carousel__item" key={speaker._id}>
-                  <SpeakerCard speaker={speaker} onOpen={onOpenSpeaker} />
+                  <SpeakerCard
+                    speaker={speaker}
+                    index={i * perView + chunkIndex}
+                    onOpen={onOpenSpeaker}
+                  />
                 </div>
               ))}
+              
             </div>
           ))}
         </div>

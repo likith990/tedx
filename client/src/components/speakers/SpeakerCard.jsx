@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./SpeakerCard.css";
 
-export default function SpeakerCard({ speaker, onOpen }) {
+export default function SpeakerCard({ speaker,index, onOpen }) {
   const [imgError, setImgError] = useState(false);
   const initials = speaker.name
     .split(" ")

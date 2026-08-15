@@ -56,6 +56,7 @@ export default function VenueSection() {
             </div>
 
             <div className="venue-card__body">
+              <p className="eyebrow venue-card__label">Venue</p>
               <h3 className="venue-card__name">{venue.name}</h3>
               <p className="venue-card__address">{venue.address}</p>
 

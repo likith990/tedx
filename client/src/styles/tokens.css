@@ -1,25 +1,35 @@
-
-
 :root {
-  --color-ink: #241609;
-  --color-paper: #e9dac2;
+  
+  --color-bg: #0a0708;
+  --color-bg-raised: #120a0c;
+  --color-burgundy: #2a0810;
+  --color-burgundy-deep: #1a0509;
+  --color-ink-inverse: #f2ece4;
+
+  
+  --color-ink: #0a0708;
+  --color-paper: #0a0708;
+  --color-mist: #150c0d;
+  --color-line: rgba(242, 236, 228, 0.14);
+  --color-muted: rgba(242, 236, 228, 0.56);
+
+ 
   --color-red: #eb0028;
   --color-red-dark: #b3001e;
-  --color-mist: #ddc7a3;
-  --color-line: #c9ac82;
-  --color-muted: #7a5c3e;
-  --color-ink-inverse: #fff8ec;
+  --color-red-dim: rgba(235, 0, 40, 0.5);
 
+  
   --font-display: "Archivo Black", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
   --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
-  --text-eyebrow: 0.75rem;
+  --text-eyebrow: 0.72rem;
   --text-body: 1rem;
-  --text-body-lg: 1.125rem;
+  --text-body-lg: 1.15rem;
   --text-h3: 1.5rem;
-  --text-h2: clamp(2rem, 4vw, 3rem);
-  --text-h1: clamp(2.75rem, 7vw, 5.5rem);
+  --text-h2: clamp(2.25rem, 4.5vw, 3.5rem);
+  --text-h1: clamp(3.5rem, 11vw, 9.5rem);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -28,13 +38,17 @@
   --space-5: 2.5rem;
   --space-6: 4rem;
   --space-7: 6rem;
-  --space-8: 9rem;
+  --space-8: 10rem;
 
-  --content-max: 1200px;
+  --content-max: 1320px;
+  --edge: clamp(1.25rem, 5vw, 4rem);
+
   --radius-sm: 2px;
-  --radius-md: 4px;
+  --radius-md: 3px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-fast: 160ms;
-  --dur-base: 320ms;
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-base: 420ms;
+  --dur-slow: 900ms;
 }

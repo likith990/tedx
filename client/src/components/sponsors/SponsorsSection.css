@@ -1,6 +1,22 @@
 
 .sponsors-section {
+  position: relative;
   border-top: 1px solid var(--color-line);
+}
+
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 900px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-burgundy-deep) 0%, transparent 70%);
+  opacity: 0.4;
+  filter: blur(50px);
+  pointer-events: none;
 }
 
 .sponsors-section__head {

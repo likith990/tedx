@@ -1,4 +1,7 @@
-
+.speakers-section {
+  position: relative;
+  border-top: 1px solid var(--color-line);
+}
 
 .speakers-section__state {
   padding: var(--space-6) 0;
