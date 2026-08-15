@@ -26,6 +26,9 @@ export default function Home() {
         <section className={`hero${ready ? " is-ready" : ""}`}>
           <div className="hero__grain" aria-hidden="true" />
           <div className="hero__glow" aria-hidden="true" />
+          <div className="hero__glow hero__glow--secondary" aria-hidden="true" />
+          <div className="hero__drift-line hero__drift-line--a" aria-hidden="true" />
+          <div className="hero__drift-line hero__drift-line--b" aria-hidden="true" />
 
           <div className="container hero__inner">
             <div className="hero__meta hero__reveal" style={{ transitionDelay: "0ms" }}>
